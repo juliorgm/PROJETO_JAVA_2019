@@ -2,11 +2,13 @@ package funcionarios;
 
 public class Funcionario {
     private static final double VALOR_MINIMO_AUMENTO = 0.01;
+    private static final double VALOR_MINIMO_BONIFICACAO = 0.1;
+
     private String nomeFuncionario;
     private String rgFuncionario;
     private String departamento;
     private String dataEntrada;
-    private double salario;
+    protected double salario;
 
 
     public Funcionario(String nomeFuncionario, String rgFuncionario, String departamento, String dataEntrada, double salario) {
@@ -28,6 +30,13 @@ public class Funcionario {
         return false;
     }
 
+    public double calculaComissao(int comissao) {
+        return comissao;
+    }
+
+    public double recebeBonificacao() {
+        return this.calculaGanhoAnual()*VALOR_MINIMO_BONIFICACAO;
+    }
 
     public double calculaGanhoAnual() {
         return this.salario * 12;

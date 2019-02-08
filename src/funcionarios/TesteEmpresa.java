@@ -2,7 +2,8 @@ package funcionarios;
 
 public class TesteEmpresa {
     public static void main(String[] args) {
-        Empresa senac = new Empresa("SENAC","123213213",5);
+        Empresa senac = new Empresa("SENAC","123213213",
+                new Funcionario[3]);
 
         senac.adicionaFuncionario(new Funcionario(
                 "Julio","123","Instrutores"
@@ -11,13 +12,6 @@ public class TesteEmpresa {
         senac.adicionaFuncionario(new Funcionario(
                 "Eduardo","321","Apoio"
                 ,"01/02/2016",1200));
-        senac.adicionaFuncionario(new Funcionario(
-                "Eduardo","321","Apoio"
-                ,"01/02/2016",1200));
-        senac.adicionaFuncionario(new Funcionario(
-                "Eduardo","321","Apoio"
-                ,"01/02/2016",1200));
-
 
         senac.exibeTodosFuncionarios();
     }

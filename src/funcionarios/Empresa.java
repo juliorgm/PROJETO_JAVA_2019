@@ -1,7 +1,5 @@
 package funcionarios;
 
-import java.util.Arrays;
-
 public class Empresa {
     private String nomeEmpresa;
     private String cnpjEmpresa;
@@ -12,6 +10,12 @@ public class Empresa {
         this.nomeEmpresa = nomeEmpresa;
         this.cnpjEmpresa = cnpjEmpresa;
         Funcionarios = new Funcionario[numeroFuncionarios];
+    }
+
+    public Empresa(String nomeEmpresa, String cnpjEmpresa, Funcionario[] funcionarios) {
+        this.nomeEmpresa = nomeEmpresa;
+        this.cnpjEmpresa = cnpjEmpresa;
+        Funcionarios = funcionarios;
     }
 
     public void adicionaFuncionario(Funcionario funcionario) {
