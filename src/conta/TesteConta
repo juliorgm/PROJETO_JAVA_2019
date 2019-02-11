@@ -1,0 +1,14 @@
+Conta contaTeste = new Conta(123,1010,
+                new Cliente("João","Farias","98765432178"),10);
+
+        Cliente cliente = new Cliente("Maria", "Rosa","12345678921");
+        Conta contaTeste2 = new Conta(1234,3214,cliente,1500);
+
+        Conta contaTeste3 = new Conta(23423,1245,
+                new Cliente("Vitor","Sardinha","96385274132"),10);
+
+        contaTeste.saca(5000);
+
+        System.out.println(contaTeste.getAgencia());
+
+        System.out.println(Conta.getTotalDeContas());

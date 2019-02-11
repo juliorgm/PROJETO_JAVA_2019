@@ -10,7 +10,6 @@ public class Funcionario {
     private String dataEntrada;
     protected double salario;
 
-
     public Funcionario(String nomeFuncionario, String rgFuncionario, String departamento, String dataEntrada, double salario) {
         this.nomeFuncionario = nomeFuncionario;
         this.rgFuncionario = rgFuncionario;
@@ -49,5 +48,9 @@ public class Funcionario {
                 "\nDepartamento: " + departamento +
                 "\nData de entrada: " + dataEntrada +
                 "\nSalario: " + salario;
+    }
+
+    public String getNome() {
+        return this.nomeFuncionario;
     }
 }

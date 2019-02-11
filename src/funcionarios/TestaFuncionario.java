@@ -16,9 +16,19 @@ public class TestaFuncionario {
                 , 10000, 25, 12345);
 
         //f1.recebeAumento(200);
+
+        g1.recebeAumento(123);
         g1.autentica(12345);
 
+        ControleBonificacoes controle = new ControleBonificacoes();
 
-        System.out.println("Gerente -" + g1.recebeBonificacao());
+        controle.registraBonificacao(g1);
+        controle.registraBonificacao(f1);
+
+        String totalBonificacoes = Util.formataDecimal(controle.getTotalBonificacoes());
+
+        System.out.println("Gerente -" + totalBonificacoes);
+
+        System.out.println(g1.calculaGanhoAnual());
     }
 }

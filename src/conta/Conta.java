@@ -36,8 +36,8 @@ public class Conta {
         return false;
     }
 
-    public int getAgencia() {
-        return agencia;
+    public double getSaldo() {
+        return saldo;
     }
 
     public static int getTotalDeContas(){

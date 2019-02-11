@@ -2,19 +2,19 @@ package conta;
 
 public class TesteConta {
     public static void main(String[] args) {
-        Conta contaTeste = new Conta(123,1010,
-                new Cliente("João","Farias","98765432178"),10);
+        ContaPoupanca contaPoupanca = new ContaPoupanca(123,1010,
+                new Cliente("João","Farias","98765432178"),5500);
 
-        Cliente cliente = new Cliente("Maria", "Rosa","12345678921");
-        Conta contaTeste2 = new Conta(1234,3214,cliente,1500);
+        ContaCorrente contaCorrente = new ContaCorrente(23423,1245,
+                new Cliente("Vitor","Sardinha","96385274132"),5500);
 
-        Conta contaTeste3 = new Conta(23423,1245,
-                new Cliente("Vitor","Sardinha","96385274132"),10);
 
-        contaTeste.saca(5000);
+        contaCorrente.saca(500);
+        contaPoupanca.saca(500);
 
-        System.out.println(contaTeste.getAgencia());
+        contaCorrente.transferePara(1000,contaPoupanca);
 
-        System.out.println(Conta.getTotalDeContas());
+        System.out.println(contaCorrente.getSaldo());
+        System.out.println(contaPoupanca.getSaldo());
     }
 }
